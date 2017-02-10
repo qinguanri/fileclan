@@ -1,8 +1,7 @@
 package handler
 
 import (
-	//"360.cn/armory/glog"
-	"360.cn/fileclan/middlewares"
+	"github.com/qinguanri/fileclan/middlewares"
 	"fmt"
 	"github.com/valyala/fasthttp"
 	"gopkg.in/mgo.v2"
