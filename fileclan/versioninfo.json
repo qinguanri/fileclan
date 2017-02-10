@@ -22,15 +22,15 @@
 	"StringFileInfo":
 	{
 		"Comments": "",
-		"CompanyName": "360企业安全集团",
-		"FileDescription": "天擎",
+		"CompanyName": "xxx",
+		"FileDescription": "xx",
 		"FileVersion": "1.0.0.1001",
 		"InternalName": "fileclan.exe",
-		"LegalCopyright": "(C) 360.cn All Rights Reserved",
+		"LegalCopyright": "xxxx",
 		"LegalTrademarks": "",
 		"OriginalFilename": "fileclan.exe",
 		"PrivateBuild": "",
-		"ProductName": "天擎",
+		"ProductName": "xx",
 		"ProductVersion": "1.0.0.1001",
 		"SpecialBuild": ""
 	},
