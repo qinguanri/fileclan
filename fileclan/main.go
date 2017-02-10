@@ -1,10 +1,8 @@
 package main
 
 import (
-	"360.cn/armory/glog"
-	//logclear "360.cn/armory/logclear2"
-	"360.cn/fileclan/handler"
-	"360.cn/fileclan/middlewares"
+	"github.com/qinguanri/fileclan/handler"
+	"github.com/qinguanri/fileclan/middlewares"
 	"flag"
 	"fmt"
 	"github.com/buaazp/fasthttprouter"
@@ -12,36 +10,13 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
-	//"runtime/debug"
 	"syscall"
-	//"time"
 )
 
 const (
 	// FileClan配置文件
 	CONFIG_FILE = `.` + string(os.PathSeparator) + `fileclan.conf`
 )
-
-// func setLogClear(interval int64, logDir string) {
-// 	// 启动logclear保平安
-// 	_ = logclear.NewLogClear(logclear.InitOption{
-// 		Path:      logDir,
-// 		TimeInter: interval,
-// 	})
-// }
-
-// func freeUselessMemory() {
-// 	// 强制还给系统不需要的内存 半分钟释放一次
-// 	go func() {
-// 		ti := time.Tick(30 * time.Second)
-// 		for range ti {
-// 			select {
-// 			case <-ti:
-// 				debug.FreeOSMemory()
-// 			}
-// 		}
-// 	}()
-// }
 
 func main() {
 	flag.Parse()
@@ -59,11 +34,6 @@ func main() {
 
 	// 将配置文件内容打印到屏幕
 	fmt.Println(ConsoleOut(*middlewares.Conf))
-
-	// glog.Infoln(fmt.Sprintf("logclear will work on %s, every %d second.", selfPath, middlewares.Conf.LogClear.WorkInterval))
-	// setLogClear(middlewares.Conf.LogClear.WorkInterval, selfPath)
-
-	// freeUselessMemory()
 
 	if err = middlewares.InitBackend(); err != nil {
 		glog.Fatalln("init backend failed, err: %v", err)
