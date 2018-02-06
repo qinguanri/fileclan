@@ -26,6 +26,8 @@ type MetaData struct {
  */
 type FileObject struct {
 	Meta MetaData // 文件的描述信息
+
+	
 	Data []byte   // 二进制文件的内容
 }
 
